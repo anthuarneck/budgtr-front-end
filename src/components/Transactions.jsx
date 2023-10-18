@@ -3,8 +3,8 @@ import { useState, useEffect } from "react";
 import Transaction from "./Transaction";
 const API = import.meta.env.VITE_BASE_API;
 
-const Transactions = () => {
-  const [transactions, setTransactions] = useState([]);
+const Transactions = ({ transactions, setTransactions }) => {
+
   useEffect(() => {
     fetch(`${API}/transactions`)
       .then((response) => response.json())

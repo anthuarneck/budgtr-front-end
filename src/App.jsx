@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 import "./App.css";
 
 import NavBar from "./components/NavBar";
@@ -10,6 +11,7 @@ import Edit from "./pages/Edit";
 import Error from "./pages/Error";
 
 function App() {
+  const [transactions, setTransactions] = useState([]);
   return (
     <div>
       <Router>
@@ -17,8 +19,8 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/transactions" element={<Index />} />
-            <Route path="/transactions/new" element={<New />} />
+            <Route path="/transactions" element={<Index transactions={transactions} setTransactions={setTransactions}/>} />
+            <Route path="/transactions/new" element={<New transactions={transactions} setTransactions={setTransactions} />} />
             <Route path="/transactions/:index" element={<Show />} />
             <Route path="/transactions/:index/edit" element={<Edit />} />
             <Route path="*" element={<Error />} />

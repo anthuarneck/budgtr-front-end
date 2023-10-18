@@ -3,8 +3,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const API = import.meta.env.VITE_BASE_API
 
-const NewForm = () => {
-  const [transaction, setTransactions] = useState({
+const NewForm = ({ transactions, setTransactions}) => {
+  const [transaction, setTransaction] = useState({
     id: 0,
     item_name: "",
     amount: 0,
@@ -16,7 +16,7 @@ const NewForm = () => {
   const navigate = useNavigate();
 
   const handleTextChange = (event) => {
-    setTransactions({ ...transaction, [event.target.id]: event.target.value });
+    setTransaction({ ...transaction, [event.target.id]: event.target.value });
   };
 
   const addTransaction = () => {
@@ -31,7 +31,7 @@ const NewForm = () => {
     fetch(`${API}/transactions`, options)
       .then(() => {
         alert("New transaction added!");
-        navigate("/transactions");
+        navigate(`/transactions/${transactions.length}`);
       })
       .catch((error) => console.error(error));
   };

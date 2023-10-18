@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
     return (
         <nav>
-            <h1>
+            <h2>Budgtr</h2>
+            <h3>
                 <Link to="/transactions">Transactions</Link>
-            </h1>
-            <h1>
+            </h3>
+            <h3>
                 <Link to="/transactions/new">New Entry</Link>
-            </h1>
+            </h3>
         </nav>
     );
 }
