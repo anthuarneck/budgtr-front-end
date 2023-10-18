@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-const API = import.meta.env.VITE_BASE_API
+const API = import.meta.env.VITE_BASE_API;
 
-const NewForm = ({ transactions, setTransactions}) => {
+const NewForm = ({ transactions, setTransactions }) => {
   const [transaction, setTransaction] = useState({
     id: 0,
     item_name: "",
