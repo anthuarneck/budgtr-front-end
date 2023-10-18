@@ -1,9 +1,10 @@
 import React from 'react';
+import EditForm from '../components/EditForm';
 
 const Edit = () => {
     return (
-        <div>
-            
+        <div className='New Edit'>
+            <EditForm />            
         </div>
     );
 }
