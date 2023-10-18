@@ -8,7 +8,7 @@ const Transaction = ({ transaction, index }) => {
       <td>{transaction.item_name}</td>
       <td>{transaction.amount}</td>
       <td>
-        <Link to={`/transactions/${index}`}>click</Link>
+        <Link to={`/transactions/${index}`}>📂</Link>
       </td>
     </tr>
   );

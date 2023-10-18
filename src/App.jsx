@@ -5,6 +5,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Index from "./pages/Index";
+import NewForm from "./components/NewForm";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/transactions" element={<Index />} />
+            <Route path="/transactions/new" element={<NewForm />} />
           </Routes>
         </main>
       </Router>
