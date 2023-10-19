@@ -1,5 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import ProgressBar from "react-bootstrap/ProgressBar";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Tracker = ({ transactions }) => {
   const [total, setTotal] = useState(0);
@@ -30,7 +32,10 @@ const Tracker = ({ transactions }) => {
 
   return (
     <div className="Tracker" style={{ background: trackerColor }}>
-      Total Amount: ${total}
+      Bank Total Amount: ${total}
+      <div className="ProgressBar">
+        <ProgressBar now={total} min={-50} />
+      </div>
     </div>
   );
 };
