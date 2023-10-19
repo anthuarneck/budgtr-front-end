@@ -32,7 +32,7 @@ const Tracker = ({ transactions }) => {
 
   return (
     <div className="Tracker" style={{ background: trackerColor }}>
-      Bank Total Amount: ${total}
+      <p>Bank Total Amount: ${total}</p>
       <div className="ProgressBar">
         <ProgressBar now={total} min={-50} />
       </div>
