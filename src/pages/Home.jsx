@@ -2,8 +2,9 @@ import React from 'react';
 
 const Home = () => {
     return (
-        <div>
-            Welcome to Budgtr! The budgeting app for you.
+        <div className='Home'>
+            <h1>Welcome to Budgtr!</h1>
+            <h3> The budgeting app you trust.</h3>
         </div>
     );
 }

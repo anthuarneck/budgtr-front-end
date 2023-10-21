@@ -32,7 +32,7 @@ const TransactionDetails = () => {
       {transaction.date ? <h4>Date: {transaction.date}</h4> : null}
       {transaction.from ? <h4>From: {transaction.from}</h4> : null}
       {transaction.category ? <h4>Category: {transaction.category}</h4> : null}
-      <div className="Nav">
+      <div className="Buttons">
         <div>
           <Link to={`/transactions`}>
             <button>Back</button>

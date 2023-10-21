@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 const Tracker = ({ transactions }) => {
   const [total, setTotal] = useState(0);
   const [trackerColor, setTrackerColor] = useState("");
+  const [progressBarMin, setProgressBarMin] = useState(0)
 
   const updateTotal = () => {
     let sum = 0;
@@ -21,9 +22,15 @@ const Tracker = ({ transactions }) => {
     } else if (total >= 0 && total <= 100) {
       setTrackerColor("darkorange");
     } else {
-      setTrackerColor("green");
+      setTrackerColor("#179e0d");
     }
   };
+
+  const updateProgressBarMin = () => {
+    if (total <= 0) {
+        setProgressBarMin(0)
+    }
+  }
 
   useEffect(() => {
     updateTotal();
@@ -34,7 +41,7 @@ const Tracker = ({ transactions }) => {
     <div className="Tracker" style={{ background: trackerColor }}>
       <p>Bank Total Amount: ${total}</p>
       <div className="ProgressBar">
-        <ProgressBar now={total} min={-50} />
+        <ProgressBar now={total} min={0} />
       </div>
     </div>
   );
