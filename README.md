@@ -52,6 +52,6 @@ This app implements React Bootstrap and uses ProgressBar component which is adde
 
 ## Links
 
-Front-end URL: https://budgtr-demo.netlify.app/
-Back-end URL: https://budgtr-zbyb.onrender.com/
+Front-end URL: https://budgtr-demo.netlify.app/\
+Back-end URL: https://budgtr-zbyb.onrender.com/\
 Back-end GitHub repository: https://github.com/anthuarneck/budgtr-back-end
