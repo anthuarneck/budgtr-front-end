@@ -26,12 +26,12 @@ const TransactionDetails = () => {
   };
   return (
     <article className="Details">
-      <h1>{transaction.item_name}</h1>
-      <h4>ID: {transaction.id}</h4>
-      <h4>Amount: ${transaction.amount}</h4>
-      {transaction.date ? <h4>Date: {transaction.date}</h4> : null}
-      {transaction.from ? <h4>From: {transaction.from}</h4> : null}
-      {transaction.category ? <h4>Category: {transaction.category}</h4> : null}
+      <h2>{transaction.item_name}</h2>
+      <p>ID: {transaction.id}</p>
+      <p>Amount: ${transaction.amount}</p>
+      {transaction.date ? <p>Date: {transaction.date}</p> : null}
+      {transaction.from ? <p>From: {transaction.from}</p> : null}
+      {transaction.category ? <p>Category: {transaction.category}</p> : null}
       <div className="Buttons">
         <div>
           <Link to={`/transactions`}>

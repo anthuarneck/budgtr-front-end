@@ -63,6 +63,10 @@ main {
   place-items: center;
 }
 
+.Transaction Link:hover {
+  color:#179e0d;
+}
+
 table {
   margin-top: 1em;
   width: 100%;
