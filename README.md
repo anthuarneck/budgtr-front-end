@@ -49,3 +49,9 @@ On the **Show Page**, you can:
 This app implements faker.js in the backend in order to create the first 5 transactions automatically. All info on the first 5 transactions are completely randomized.
 
 This app implements React Bootstrap and uses ProgressBar component which is added to Tracker component on Index page.
+
+## Links
+
+Front-end URL: https://budgtr-demo.netlify.app/
+Back-end URL: https://budgtr-zbyb.onrender.com/
+Back-end GitHub repository: https://github.com/anthuarneck/budgtr-back-end
